@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hawa Trading Company Login Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="loginHeader">
+      <h1>HAWA TRADING COMPANY</h1>
+      <h3>Welcome to Hawa trading company</h3>
+      <div class="loginBody">
+        <form onsubmit="validateLogin(event)">
+          <div class="loginInputContainer">
+            <label for="username">Username</label>
+            <input id="username" placeholder="Username" type="text">
+          </div>
+          <div class="loginInputContainer password-container">
+            <label for="password">Password</label>
+            <div class="password-wrapper">
+              <input id="password" placeholder="Password" type="password">
+              <span id="togglePassword" class="toggle-password">👁️</span>
+            </div>
+          </div>
+          
+          <div class="loginButtonContainer">
+            <button type="submit">Login</button>
+          </div>
+          <div class="forgot-password">
+            <a href="forgot-password.html">Forgot Password?</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="hawa.js"></script>
+  <script>
+    // Toggle password visibility
+    document.getElementById('togglePassword').addEventListener('click', function () {
+      const passwordField = document.getElementById('password');
+      const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordField.setAttribute('type', type);
+      this.textContent = type === 'password' ? '👁️' : '🙈';
+    });
+  </script>
+</body>
+</html>
+
+

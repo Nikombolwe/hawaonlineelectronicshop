@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard - Hawa Trading</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body class="admin-page">
+  <div class="admin-container">
+    <h1>Admin Dashboard</h1>
+    <form id="add-product-form">
+      <h2>Add New Product</h2>
+
+      <label for="product-name">Product Name:</label>
+      <input type="text" id="product-name" required />
+
+      <label for="product-brand">Brand:</label>
+      <input type="text" id="product-brand" required />
+
+      <label for="product-price">Price (TZS):</label>
+      <input type="number" id="product-price" required min="0" />
+
+      <label for="product-image">Image URL:</label>
+      <input type="url" id="product-image" placeholder="https://example.com/image.jpg" required />
+
+      <button type="submit" class="btn-primary">Add Product</button>
+    </form>
+    <div id="product-list-admin">
+      <h2>Existing Products</h2>
+      <div class="product-list"></div>
+    </div>
+  </div>
+  <section class="order-list-section">
+    <h2>Customer Orders</h2>
+    <div id="ordersList">
+      <!-- Orders will appear here -->
+    </div>
+  </section>
+  
+
+  <script src="admin.js"></script>
+</body>
+</html>
+
+
